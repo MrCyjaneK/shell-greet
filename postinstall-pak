@@ -1,0 +1,12 @@
+#!/bin/bash
+if [[ "X$(grep "source /usr/share/shell-greet/greeter/synth-shell-greeter.sh" /etc/bash.bashrc)" == "X" ]];
+then
+    echo "enabling greeter"
+    echo -n -e "\nsource /usr/share/shell-greet/greeter/synth-shell-greeter.sh\n" >> /etc/bash.bashrc
+fi
+
+if [[ "X$(grep "source /usr/share/shell-greet/prompt/prompt.sh" /etc/bash.bashrc)" == "X" ]];
+then
+    echo "enabling prompt"
+    echo -n -e "\nsource /usr/share/shell-greet/prompt/prompt.sh\n" >> /etc/bash.bashrc
+fi
